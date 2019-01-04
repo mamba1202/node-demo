@@ -17,8 +17,6 @@ var server = http.createServer(function(request, response){
   var queryObject = parsedUrl.query
   var method = request.method
 
-  /******** 从这里开始看，上面不要看 ************/
-
   console.log('HTTP 路径为\n' + path)
   if(path == '/style.js'){
     response.setHeader('Content-Type', 'text/css; charset=utf-8')
@@ -41,8 +39,6 @@ var server = http.createServer(function(request, response){
     response.statusCode = 404
     response.end()
   }
-
-  /******** 代码结束，下面不要看 ************/
 })
 
 server.listen(port)
